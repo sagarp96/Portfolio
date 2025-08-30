@@ -8,7 +8,7 @@ export const metaData = {
 
 export const socialLinks = {
   twitter: "https://x.com/1tssirius",
-  github: "https://github.com/sagarp96/sagarp96/blob/main/README.md",
+  github: "https://github.com/sagarp96",
   instagram: "https://www.instagram.com/",
   linkedin: "https://www.linkedin.com/in/sagar-panwar-2b81aa381/",
   email: "mailto:sagarp051996@outlook.com",
