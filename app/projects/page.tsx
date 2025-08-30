@@ -21,9 +21,17 @@ export default function Projects() {
             rel="noopener noreferrer"
           >
             <div className="w-full flex flex-col sm:flex-row justify-between items-start sm:items-center space-y-1 sm:space-y-0 sm:space-x-2">
-              <h2 className="text-black dark:text-white">{project.title}</h2>
+              <h2 className="text-black dark:text-white">
+                {project.title}
+                <br />
+                <span className="text-neutral-600 dark:text-neutral-400">
+                  {project.TechStackused.join(", ")}
+                </span>
+              </h2>
               <p className="text-neutral-600 dark:text-neutral-400">
-                {project.description}
+                {project.description1}
+                <br />
+                {project.description2}
               </p>
             </div>
           </Link>
