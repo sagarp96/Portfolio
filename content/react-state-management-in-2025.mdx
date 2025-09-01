@@ -1,0 +1,46 @@
+---
+title: "React state management in 2025"
+publishedAt: "2025-09-01"
+summary: "A casual rundown of how React teams manage state in 2025 — server components, client stores, and the small libraries that actually win in practice."
+tags: "react,state-management,frontend"
+---
+
+React state in 2025 is noticeably less chaotic than in previous years. Server components, clearer data-fetching conventions, and a handful of compact state libraries address most common needs. The practical approach below reflects these changes.
+
+## The landscape right now
+
+- Server Components (RSC) are common for rendering and reduce the need for client state for initial render.
+- Client state still matters for interactivity, caching, optimistic updates, and local UI state.
+- A few libraries dominate because they keep things small and straightforward: Zustand, Jotai, React Query (TanStack Query), and Redux Toolkit for very structured apps.
+
+## Recommended patterns
+
+1. Use server components for data-heavy pages where possible.
+2. Use a data-fetching cache (TanStack Query) for remote data and mutations — it handles retries, stale-while-revalidate patterns, and cache invalidation effectively.
+3. For local client state (UI toggles, form drafts), employ a small store such as Zustand or Jotai.
+4. For large, complex state with many cross-cutting reducers, Redux Toolkit remains a practical choice.
+
+## Quick library notes
+
+- TanStack Query: Not a state manager in the classic sense — it’s a remote-data cache. It covers most server-data needs and pairs well with RSC.
+- Zustand: Minimal, ergonomic, and integrates well into TypeScript. Zero boilerplate for small app stores.
+- Jotai: Atom-based (primitive pieces of state). Great when you want isolated state pieces without prop-drilling.
+- Redux Toolkit: Comes into play when you need predictable immutability, middleware, or time-travel debugging. More boilerplate, but very structured.
+
+## Example setup (recommended pattern)
+
+- Server components fetch canonical data and render.
+- Client components use TanStack Query for mutations and updates.
+- Local UI pieces use Zustand atoms where appropriate.
+
+This provides server-rendered pages with snappy client interactivity while keeping client-side complexity minimal.
+
+## Edge cases and gotchas
+
+- Overusing global stores: Don’t shove everything into a single global object. Split concerns: remote data vs local UI state.
+- SSR hydration mismatch: watch for differences between server and client initial states — keep defaults stable and fetch client-only state on mount.
+- Persistence: If you need to persist UI drafts, keep the logic small and explicit (localStorage wrapper around the tiny store).
+
+## Final advice
+
+The best state approach in 2025 is pragmatic: rely on the server when possible, use a robust remote-data cache, and use small client stores for local UI. This combination reduces bugs and maintains a smooth developer experience. Teams that require structured state management can continue using Redux Toolkit where it fits.

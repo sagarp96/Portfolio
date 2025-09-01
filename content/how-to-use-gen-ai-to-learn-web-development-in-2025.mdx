@@ -1,0 +1,65 @@
+---
+title: "How to use Gen AI to learn Web development in 2025"
+publishedAt: "2025-03-01"
+summary: "Practical, human-first strategies for using generative AI to learn web dev — projects, prompts, and how to avoid over-reliance."
+tags: "ai,learning,webdev"
+---
+
+Generative AI is ubiquitous in 2025 and, when used correctly, becomes an effective learning partner. The sections below outline practical approaches to using Gen AI for learning web development rather than merely obtaining answers.
+
+## Ground rules (so AI assists, not replaces)
+
+- Attempt the task independently first: write the code for at least 15–30 minutes before requesting assistance.
+- Use AI to unblock specific problems rather than to outsource design thinking: request explanations of _why_ a solution works as well as _how_ to implement it.
+- Validate generated output by running and testing it; treat suggestions as guidance rather than definitive answers.
+
+## Practical workflows
+
+1. Project-first learning
+
+   - Select a small project (for example, a TODO app with auth) and implement a minimal working version manually.
+   - When encountering obstacles, request a focused hint (for example, "Why is my fetch returning 401 after login?") rather than a full implementation.
+
+2. Code review + explanation
+
+   - Share code and ask for an explanation of its behavior and potential failure modes to receive targeted improvements.
+
+3. Live pair-programming
+
+   - Use AI as a pair programmer: propose an implementation and iterate through follow-up questions to refine design choices.
+
+4. Learning by debugging
+
+   - Provide failing tests or stack traces to the AI and request possible root causes and debugging steps.
+
+## Prompts that level up learning
+
+- "Explain this code like I'm building it for the first time and note any security or performance issues."
+- "Suggest three simpler ways to implement this feature with pros and cons."
+- "What are common edge cases for this API, and how should I test them?"
+
+## Tools & integrations I recommend
+
+- Local LLMs (for privacy) for day-to-day brainstorming.
+- GitHub Copilot or similar for inline suggestions, but still review every change.
+- Playground sessions for architecture sketches and trade-off analysis.
+
+## Common mistakes students make
+
+- Copy-pasting without understanding. Fix: explain every line you paste.
+- Over-reliance on generated dependencies. Fix: prefer standard, well-documented libraries.
+- Skipping tests and assumptions. Fix: write quick unit/integration tests as you go.
+
+## A small example exercise
+
+Try this: build a small app that fetches posts and adds comments. Steps:
+
+1. Scaffold a simple frontend with Vite.
+2. Add a backend endpoint (Edge Function or Express) that returns dummy posts.
+3. Implement client fetching and optimistic UI for comments.
+
+When you get stuck, ask the AI for one focused help item (e.g., "How to implement optimistic updates with TanStack Query?") and then implement the suggested change yourself.
+
+## Final thought
+
+Generative AI can accelerate learning when paired with deliberate practice. It should be used to shorten feedback loops, not to bypass the learning process. Verify outputs and prioritize hands-on building over passive consumption.

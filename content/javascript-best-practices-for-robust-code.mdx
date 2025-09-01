@@ -1,0 +1,58 @@
+---
+title: "JavaScript best practices for a robust Code"
+publishedAt: "2024-02-01"
+summary: "Actionable JavaScript practices I use to keep code maintainable, performant, and resilient in 2025."
+tags: "javascript,best-practices,engineering"
+---
+
+The following are practical JavaScript best practices commonly followed by experienced engineers. No dogma — just approaches that save time and reduce bugs.
+
+## 1) Prefer small, pure functions
+
+Small functions are easier to test and reason about. Aim for functions that do one thing and return predictable outputs.
+
+## 2) Use TypeScript or tight runtime checks
+
+If you don’t want full TypeScript, add runtime validators for public boundaries (zod, yup). Types catch many mistakes before runtime.
+
+## 3) Avoid deep mutation
+
+Immutable updates (spread, structuredClone, immer) reduce surprising bugs. If performance demands it, measure and document the trade-off.
+
+## 4) Handle async errors explicitly
+
+Use try/catch, and fail fast in server code. Prefer returning structured error objects from APIs instead of raw error messages.
+
+## 5) Test the important things
+
+Unit test business logic, integration test APIs, and add a couple of end-to-end happy path tests for critical flows.
+
+## 6) Keep dependencies minimal and reviewed
+
+Every dependency is a maintenance cost. Favor small, well-maintained libraries and pin versions in lockfiles.
+
+## 7) Lint, format, and CI gates
+
+Use ESLint and Prettier, and fail PRs on lint/type errors. CI catches many regressions before they reach main.
+
+## 8) Log with context
+
+For servers, structured logging (JSON with request IDs) makes debugging production issues much easier.
+
+## 9) Optimize where it matters
+
+Premature optimization is real — profile before optimizing. Focus on network, DB, and algorithmic hotspots.
+
+## 10) Write clear, minimal docs
+
+A short README and a few comments for tricky parts go a long way. Documentation is an investment in your future self.
+
+## Edge cases & practical tips
+
+- Use feature flags for risky rollouts.
+- Keep API contracts small and version them when you need incompatible changes.
+- Use a consistent error shape across services to simplify client handling.
+
+## Final note
+
+Robust code is less about clever hacks and more about predictable patterns, clear boundaries, and small, deliberate steps. Applying these basics consistently leads to more maintainable and reliable systems.

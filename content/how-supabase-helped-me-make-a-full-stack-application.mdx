@@ -1,0 +1,53 @@
+---
+title: "How Supabase helped me make a Full stack application"
+publishedAt: "2025-01-01"
+summary: "A hands-on story of building a fullstack app with Supabase — auth, realtime, storage, and the trade-offs I ran into."
+tags: "supabase,fullstack,database"
+---
+
+Supabase is a popular backend choice for prototypes and production projects where minimal infra management is desired. Below is a concise account of how Supabase can accelerate shipping a fullstack application and the situations that may require extra decisions.
+
+## What I used from Supabase
+
+- Auth (email, OAuth providers)
+- Postgres (managed, with row-level security)
+- Realtime subscriptions (for live updates)
+
+## Why I picked Supabase
+
+- Speed: I can get auth and a database up in minutes.
+- Familiarity: Postgres under the hood means I don't have to learn a new query language.
+- Full feature set: Auth + DB + storage + realtime gives me most server needs without wiring multiple providers.
+
+## The build story (short)
+
+1. Modelled user and post tables using the Supabase SQL editor.
+2. Enabled row-level security and implemented a policy allowing authenticated users to insert posts.
+3. Integrated front-end auth using the Supabase JS client; the auth flow is straightforward.
+4. Employed Realtime to push new posts to subscribed clients for a live feed.
+
+## When Supabase removed friction
+
+- No infra setup for Postgres — saves a week when you’re just trying to prototype.
+- Auth and OAuth flows are boringly simple; that’s a good thing.
+- Storage + signed URLs made file handling easy without S3 config.
+
+## Pain points and considerations
+
+- Policies & RLS: Row-level security is powerful but easy to misconfigure. Test your policies thoroughly.
+- Realtime scale: Works great for low-to-medium traffic apps; for massive realtime workloads you may need to think about architecture and limits.
+- Vendor lock-in: Supabase is largely Postgres-compatible, but some managed features (Edge Functions, Storage APIs) will tie you into their platform.
+- Local development: Supabase local emulators exist, but syncing state with the cloud can get tricky — keep a staging project for reliable testing.
+
+## Tips & tricks I picked up
+
+- Use typed Postgres clients (generate types from your schema) to avoid runtime errors.
+- Keep RLS policies in source control by scripting migrations (SQL files), not only editing in the dashboard.
+- Cache read-heavy queries on the client with TanStack Query to reduce DB load.
+- Combine Edge Functions for small server tasks (email sending, webhook handling) to keep the client simple.
+
+## Suitability and final thoughts
+
+Supabase frequently hits the sweet spot between speed and capability for many projects. For hyper-scale or highly specialized database workloads, a managed Postgres provider with separate services may be more appropriate, but Supabase can accelerate delivery for the majority of typical applications.
+
+An example Supabase policy or a sample Edge Function can be provided on request.
