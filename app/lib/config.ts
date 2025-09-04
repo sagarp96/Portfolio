@@ -2,7 +2,7 @@ export const metaData = {
   baseUrl: "https://sagarpanwar.vercel.app/",
   title: "Sagar Panwar",
   name: "Sagar Panwar",
-  ogImage: "/fevicon.ico",
+  ogImage: "/favicon.ico",
   description: "Sagar Panwar",
 };
 
