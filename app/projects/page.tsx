@@ -1,10 +1,10 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { projects } from "./project-data";
+import { projects } from "../lib/projects";
 
 export const metadata: Metadata = {
   title: "Projects",
-  description: "Nextfolio Projects",
+  description: "Projects",
 };
 
 export default function Projects() {
