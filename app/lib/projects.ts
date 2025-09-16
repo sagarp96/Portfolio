@@ -9,6 +9,15 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "Pdf Lense - Powered By Google Gemini",
+    year: 2025,
+    TechStackused: ["React", "Vite", "Tailwind CSS", "TypeScript", "SuperBase"],
+    description1: "A minimal NotebookLM-style app",
+    description2:
+      "Upload a PDF, view it, and ask questions through a chat interface",
+    url: "https://github.com/sagarp96/PdfLense",
+  },
+  {
     title: "Right-Expense",
     year: 2025,
     TechStackused: [

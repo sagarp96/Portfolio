@@ -41,7 +41,7 @@ export default function CV() {
           <span>•</span>
           <a
             className="hover:underline"
-            href="/Sagar-Resume(2025).pdf"
+            href="https://drive.google.com/file/d/1lWTWxXqmJpncL3M_3vHctHYjWaeFDBel/view?usp=drive_link"
             target="_blank"
             rel="noreferrer"
           >

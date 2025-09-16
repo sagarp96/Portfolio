@@ -48,7 +48,7 @@ export const resume: Resume = {
   fullName: "Sagar Panwar",
   title: "Front-End Developer",
   about:
-    "A results-driven Front-End Developer with over 3 years of experience specializing in the modern React ecosystem. I am passionate about building performant, type-safe user interfaces with TypeScript, and have proven experience architecting full-stack, real-time applications. I constantly fuel my curiosity by delving into the latest front-end frameworks and making something fresh and robust solutions on board.",
+    "Frontend Developer with 3+ years of experience building scalable, type-safe applications using React and TypeScript. Proven track record in architecting real-time collaborative features, implementing robust state management solutions, and delivering high-performance user interfaces",
   skills: {
     techstack: [
       "React",
@@ -65,10 +65,10 @@ export const resume: Resume = {
       "Tanstack Query",
       "Shadcn UI Library",
       "Vite.js",
-      "Recharts (dashboard)",
+      "Recharts",
       "Supabase",
       "React Hook Form",
-      "Zod (form validation)",
+      "Zod form validation",
     ],
   },
   experience: [
@@ -106,6 +106,29 @@ export const resume: Resume = {
     },
   ],
   personalProjects: [
+    {
+      title: "Pdf Lense - Powered By Google Gemini",
+      github: "https://github.com/sagarp96/PdfLense",
+      app: "https://pdflense.netlify.app/",
+      description:
+        "A minimal NotebookLM-style app. Upload a PDF, view it, and ask questions through a chat interface. Answers include citations that jump to the referenced page..",
+      keySolutions: [
+        "Frontend- The frontend part is minimal - a clean chat interface along with  Pdf viewing panel. It complies with all the accessibility guidelines. Tailwind CSS handles the clean Ui. React Pdf, renders the Pdf viewing part.",
+        "State management - Context API, provides a minimal state management for this SPA.",
+        "Backend and Storage - The backend is powered by a Vector database(pg vector extension) on Superbness. Storage is handled by Supabase storage.",
+        "Ai- The Pdf parsing is powered by Llama Parse. Embedding and vectorization is powered by Jina Ai. Retrieval through RAG and chat Responses are powered by Google gemini.",
+        "Hosting- Netlify.",
+      ],
+      techStack: [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+        "Supabase (Edge Function + Storage)",
+        "Netlify",
+      ],
+      languagesUsed: ["JavaScript", "HTML/CSS", "TypeScript", "SQL"],
+    },
     {
       title: "Right-Expense - Personal Finance Tracker",
       github: "https://github.com/sagarp96/Right-Expense",
