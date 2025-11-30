@@ -41,7 +41,7 @@ export default function CV() {
 					<span>•</span>
 					<a
 						className="hover:underline"
-						href="https://drive.google.com/file/d/12878KQXh8ma3InXqDZ90z21sMohx1A3K/view?usp=sharing"
+						href="https://flowcv.com/resume/vmm7acvb9uoe"
 						target="_blank"
 						rel="noreferrer"
 					>
