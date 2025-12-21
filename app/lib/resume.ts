@@ -48,7 +48,7 @@ export const resume: Resume = {
 	fullName: "Sagar Panwar",
 	title: "Front-End Developer",
 	about:
-		"Frontend Developer with 3+ years of experience building scalable, type-safe applications using React and TypeScript. Payment Integration, Realtime Collaboration, Testing and Data analytics.",
+		"Software developer. Curious most of time, writer sometimes",
 	skills: {
 		techstack: [
 			"React",
